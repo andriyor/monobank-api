@@ -1,0 +1,21 @@
+{
+  "name": "monobank-api",
+  "version": "1.0.0",
+  "description": "[Monobank open API](https://api.monobank.ua/docs/index.html#tag/Kliyentski-personalni-dani/paths/~1personal~1webhook/post)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.7",
+    "vitest": "^2.1.1",
+    "@types/node": "^22.5.5"
+  },
+  "packageManager": "pnpm@9.10.0+sha256.355a8ab8dbb6ad41befbef39bc4fd6b5df85e12761d2724bd01f13e878de4b13",
+  "dependencies": {
+    "date-fns": "^3.6.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
