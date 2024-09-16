@@ -1,6 +1,6 @@
 import { dateRange, delay } from "./utils";
 
-type Statement = {
+export type Statement = {
   id: string;
   time: number;
   description: string;
@@ -33,7 +33,7 @@ export class MonobankApi {
     return res.json();
   }
 
-  async getStatement({
+  async getStatements({
     account,
     from,
     to,
@@ -54,7 +54,7 @@ export class MonobankApi {
     return data;
   }
 
-  async getAllStatement({
+  async getAllStatements({
     account,
     from,
     to,
@@ -66,7 +66,7 @@ export class MonobankApi {
     const ranges = dateRange(from, to, 30);
     const result = [];
     for (let index = 0; index < ranges.length; index++) {
-      const data = await this.getStatement({
+      const data = await this.getStatements({
         account: account,
         from: ranges[index].from,
         to: ranges[index].to,

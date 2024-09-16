@@ -26,7 +26,7 @@ const monobankApi = new MonobankApi("****");
 const startDate = new Date("2024.9.1");
 const endDate = new Date("2024.9.16");
 
-monobankApi.getStatement({
+monobankApi.getStatements({
   account: "****",
   from: getUnixTime(startDate).toString(),
   to: getUnixTime(endDate).toString(),
@@ -41,7 +41,7 @@ const monobankApi = new MonobankApi("****");
 const startDate = new Date("2024.1.1");
 const endDate = new Date("2024.9.16");
 
-monobankApi.getAllStatement({
+monobankApi.getAllStatements({
   account: "****",
   from: startDate,
   to: endDate,
