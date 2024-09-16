@@ -24,6 +24,15 @@ export class MonobankApi {
     this.apiKey = apiKey;
   }
 
+  async clientInfo() {
+    const res = await fetch(`${this.baseUrl}/personal/client-info`, {
+      headers: {
+        "X-Token": this.apiKey,
+      },
+    })
+    return res.json();
+  }
+
   async getStatement({
     account,
     from,

@@ -2,12 +2,19 @@
 
 ## API Doc
 
-
 [Monobank open API](https://api.monobank.ua/docs/index.html#tag/Kliyentski-personalni-dani/paths/~1personal~1webhook/post)
 
 [API. Особистий кабінет](https://api.monobank.ua/index.html)
 
 ## Examples
+
+clientInfo
+
+```ts
+const monobankApi = new MonobankApi("****");
+
+monobankApi.clientInfo();
+```
 
 getStatement - accepts a date within 31 days
 
@@ -22,8 +29,8 @@ const endDate = new Date("2024.9.16");
 monobankApi.getStatement({
   account: "****",
   from: getUnixTime(startDate).toString(),
-  to: getUnixTime(endDate).toString()
-})
+  to: getUnixTime(endDate).toString(),
+});
 ```
 
 getAllStatement - handle arbitrary date range
@@ -37,6 +44,6 @@ const endDate = new Date("2024.9.16");
 monobankApi.getAllStatement({
   account: "****",
   from: startDate,
-  to: endDate
-})
+  to: endDate,
+});
 ```
