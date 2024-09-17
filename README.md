@@ -47,3 +47,8 @@ monobankApi.getAllStatements({
   to: endDate,
 });
 ```
+
+
+## TODO
+
+- Handle cancellation of payment
