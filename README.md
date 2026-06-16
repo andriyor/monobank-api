@@ -49,6 +49,12 @@ monobankApi.getAllStatements({
 ```
 
 
+## Notes
+
+- The `comment` field on a statement item only reflects a comment the sender
+  passed when creating the payment. A comment added manually in the app
+  afterwards is not reflected in the API.
+
 ## TODO
 
 - Handle cancellation of payment
